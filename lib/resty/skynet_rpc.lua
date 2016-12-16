@@ -45,7 +45,7 @@ function _M.new(self)
 		ngx_log(ngx_ERR,"open socket error!")
 		return nil, err
 	end
-	return setmetatable({ sock = sock, keepalive = true ,session_id_coroutine = {},sid=1},{__index=_M})
+	return setmetatable({ sock = sock,sid=1},{__index=_M})
 end
 
 function _M.set_timeout(self, timeout)
