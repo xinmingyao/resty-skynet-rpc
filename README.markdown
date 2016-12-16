@@ -61,7 +61,7 @@ Synopsis
 						r:set_timeout(1000)
 						r:connect("127.0.0.1",2528)
 						local v = r:call("SIMPLEDB","GET","a")
-      			ngx.say(v)
+            ngx.say(v)
 						r:set_keepalive(5000)
 
           }
@@ -116,7 +116,7 @@ Only call this method in the place you would have called the `close` method inst
 
 close
 -----
-`syntax: ok, err = rpc:close()`
+`syntax: ok, err = r:close()`
 
 Closes the current rpc connection and returns the status.
 
@@ -139,8 +139,11 @@ call
 Installation
 ============
 1.install skynet first: https://github.com/cloudwu/skynet
+
 2.configue skynet cluster:https://github.com/cloudwu/skynet/wiki/Cluster
+
 3.cd lualib-src && make cluster.so
+
 4.copy resty/skynet_rpc.lua and cluster.so to openresty lib
 
 [Back to TOC](#table-of-contents)
@@ -177,20 +180,6 @@ yaoxinming
 
 Copyright and License
 =====================
-
-This module is licensed under the BSD license.
-
-Copyright (C) 2012-2016, by Yichun Zhang (agentzh) <agentzh@gmail.com>, CloudFlare Inc.
-
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 [Back to TOC](#table-of-contents)
 
