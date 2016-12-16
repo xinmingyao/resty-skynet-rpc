@@ -127,8 +127,11 @@ In case of success, returns `1`. In case of errors, returns `nil` with a string 
 call
 -------------
 `syntax: r:call(service_name,method,...)`
+
  service_name:skynet service name
+
  method:skynet service  method fro rpc
+
  ...:paras for the skynet service method,cannot be point and function,it cannot be serialize
  
 [Back to TOC](#table-of-contents)
