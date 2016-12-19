@@ -116,9 +116,8 @@ function _M.send_request(self,addr,...)
 	if ok then
 		return cluster.unpack(data)
 	else
-		local msg = cluster.unpack(data) 
-		ngx_log(ngx_ERR,"%s",msg) 
-		return nil,msg 
+		ngx_log(ngx_ERR,data) 
+		return nil,data
 	end
 end
 
